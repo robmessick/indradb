@@ -11,6 +11,7 @@ on:
     branches:
       - master
       - v1
+      - 125-windows-support
   pull_request:
     branches:
       - master
