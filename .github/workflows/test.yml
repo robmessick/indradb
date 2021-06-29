@@ -41,4 +41,3 @@ jobs:
           version: "11.0"
       - run: ./scripts/ci.sh "${{ matrix.rust }}" "${{ matrix.os }}"
         shell: bash
-        working-directory: ./temp
