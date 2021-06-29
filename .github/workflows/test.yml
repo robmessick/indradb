@@ -35,6 +35,9 @@ jobs:
           components: clippy, rustfmt
 
       - uses: Swatinem/rust-cache@v1
-
+      - if: runner.os == 'Windows'
+        uses: KyleMayes/install-llvm-action@v1
+        with:
+          version: "11.0"
       - run: ./scripts/ci.sh "${{ matrix.rust }}" "${{ matrix.os }}"
         shell: bash
